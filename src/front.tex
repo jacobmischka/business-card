@@ -10,7 +10,7 @@
 \usepackage{fontspec}        % load external fonts
 \usepackage{tikz}            % drawing
 \usepackage{fontawesome}     % icon font
-\usepackage{xcolor}          % more colour options
+\usepackage{xcolor}          % more color options
 
 % load and configure tikz libraries
 \usetikzlibrary{matrix,calc,positioning}
@@ -25,19 +25,19 @@
 \newlength{\seplineheight}   \setlength{\seplineheight}{1pt}
 \newlength{\seplinedistance} \setlength{\seplinedistance}{0.3cm}
 
-% colour options
-\definecolor{seplinecolour}{HTML}{357f2d}  % green
-\definecolor{iconcolour}{HTML}{2f3142}     % dark
-\definecolor{textcolour}{HTML}{2f3142}     % dark
-\definecolor{jobtitlecolour}{HTML}{474a65} % light dark
+% color options
+\definecolor{seplinecolor}{HTML}{357f2d}  % green
+\definecolor{iconcolor}{HTML}{2f3142}     % dark
+\definecolor{textcolor}{HTML}{2f3142}     % dark
+\definecolor{jobtitlecolor}{HTML}{474a65} % light dark
 
-% change global colour
+% change global color
 \makeatletter
 \newcommand{\globalcolor}[1]{%
   \color{#1}\global\let\default@color\current@color
 }
 \makeatother
-\AtBeginDocument{\globalcolor{textcolour}}
+\AtBeginDocument{\globalcolor{textcolor}}
 
 % create additional icons
 \tikzset{
@@ -71,14 +71,14 @@
       \matrix[every node/.style={anchor=center,font=\huge},anchor=center] (name) {
         \node{Jacob}; \\
         \node{Mischka}; \\
-        \node{\color{jobtitlecolour}\normalsize\textit{Software developer}}; \\
+        \node{\color{jobtitlecolor}\normalsize\textit{Software developer}}; \\
       };
       % sep line 1
       \node[below=\seplinedistance of name] (hl1) {};
-      \draw[line width=\seplineheight,color=seplinecolour] (hl1)++(-\seplinewidth/2,0) -- ++(\seplinewidth,0);
+      \draw[line width=\seplineheight,color=seplinecolor] (hl1)++(-\seplinewidth/2,0) -- ++(\seplinewidth,0);
       % contact info
       \matrix [below=\seplinedistance of hl1,%
-               column 1/.style={anchor=center,color=iconcolour},%
+               column 1/.style={anchor=center,color=iconcolor},%
                column 2/.style={anchor=west}] (contact){
         \node{\faGlobe}; & \node{www.mischka.me};\\
         \node{\faEnvelope}; &\node{jacob@mischka.me};\\
@@ -87,7 +87,7 @@
       };
       % sep line 2
       \node[below=\seplinedistance of contact] (hl2) {};
-      \draw[line width=\seplineheight,color=seplinecolour] (hl2)++(-\seplinewidth/2,0) -- ++(\seplinewidth,0);
+      \draw[line width=\seplineheight,color=seplinecolor] (hl2)++(-\seplinewidth/2,0) -- ++(\seplinewidth,0);
       % interests
       \matrix [below=\seplinedistance of hl2,
          every node/.style={anchor=center,font=\LARGE}]

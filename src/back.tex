@@ -25,31 +25,31 @@
 \newlength{\edgemargin} \setlength{\edgemargin}{0.2in}
 \newlength{\logowith}  \setlength{\logowith}{0.5in}
 
-% define colours
-\definecolor{bordercolour}{HTML}{357f2d} % green
-\definecolor{textcolour}{HTML}{000000}   % black
+% define colors
+\definecolor{bordercolor}{HTML}{357f2d} % green
+\definecolor{textcolor}{HTML}{000000}   % black
 
-% change global colour
+% change global color
 \makeatletter
 \newcommand{\globalcolor}[1]{%
   \color{#1}\global\let\default@color\current@color
 }
 \makeatother
-\AtBeginDocument{\globalcolor{textcolour}}
+\AtBeginDocument{\globalcolor{textcolor}}
 
 \begin{document}
   \thispagestyle{empty}
   \vspace*{\fill}
   \begin{tikzpicture}[remember picture,overlay,inner sep=0pt]
-    \draw[fill=bordercolour!30,draw=bordercolour] (current page.center) ++(-\paperwidth/2+\edgemargin,\paperheight/2-\edgemargin) rectangle ++(\paperwidth-2*\edgemargin,-\paperheight+2*\edgemargin);
+    \draw[fill=bordercolor!30,draw=bordercolor] (current page.center) ++(-\paperwidth/2+\edgemargin,\paperheight/2-\edgemargin) rectangle ++(\paperwidth-2*\edgemargin,-\paperheight+2*\edgemargin);
     % logo
     \draw (current page.center) ++(0,\paperheight/2-\edgemargin-\paperwidth/2+\edgemargin+\logowith/2) node (helper logo) {};
     \node[anchor=north] at (helper logo) {\includegraphics[width=\logowith]{figures/logo}};
     % qr code
-\draw (current page.center) 
-  ++(0,-\paperheight/2+\edgemargin+\paperwidth/2-\edgemargin-\qrheight/2) 
+\draw (current page.center)
+  ++(0,-\paperheight/2+\edgemargin+\paperwidth/2-\edgemargin-\qrheight/2)
   node (helper qr) {};
-\node[anchor=south] at (helper qr) 
+\node[anchor=south] at (helper qr)
   {\qrcode[level=M,height=\qrheight]{BEGIN:VCARD
 VERSION:3.0
 N:John;Doe;;Mr.
@@ -67,4 +67,3 @@ END:VCARD}};
   \end{tikzpicture}
   \vspace*{\fill}
 \end{document}
-
