@@ -2,3 +2,4 @@ build.sh
 *.pdf
 *.log
 *.aux
+!src/figures/*.pdf
