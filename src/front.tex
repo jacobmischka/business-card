@@ -69,9 +69,9 @@
     \begin{tikzpicture}
       % name
       \matrix[every node/.style={anchor=center,font=\huge},anchor=center] (name) {
-        \node{John}; \\
-        \node{Doe}; \\
-        \node{\color{jobtitlecolour}\normalsize\textit{job title}}; \\
+        \node{Jacob}; \\
+        \node{Mischka}; \\
+        \node{\color{jobtitlecolour}\normalsize\textit{Software developer}}; \\
       };
       % sep line 1
       \node[below=\seplinedistance of name] (hl1) {};
@@ -80,10 +80,10 @@
       \matrix [below=\seplinedistance of hl1,%
                column 1/.style={anchor=center,color=iconcolour},%
                column 2/.style={anchor=west}] (contact){
-        \node{\faGlobe}; & \node{johndoe.com};\\
-        \node{\faEnvelope}; &\node{me@johndoe.com};\\
-        \node{\faPhone}; &\node{+1 781 555 1212}; \\
-        \node{\faGithub}; &\node{johndoe}; \\
+        \node{\faGlobe}; & \node{www.mischka.me};\\
+        \node{\faEnvelope}; &\node{jacob@mischka.me};\\
+        \node{\faPhone}; &\node{409 210 1337}; \\
+        \node{\faGithub}; &\node{jacobmischka}; \\
       };
       % sep line 2
       \node[below=\seplinedistance of contact] (hl2) {};
@@ -95,7 +95,7 @@
         \node{\faCode}; & \node{\faCoffee}; &
         \node{\faLock}; & \node{\faWrench}; &
         \node{\faCameraRetro}; \\
-      }; 
+      };
     \end{tikzpicture}
   \end{center}
   \vspace*{\fill}
